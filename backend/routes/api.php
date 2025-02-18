@@ -1,16 +1,14 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ResetPasswordController;
-use Illuminate\Http\Request;
-use App\Http\Controllers\TaskController;
-use Illuminate\Support\Facades\Route;
 
 
 Route::post('/home/register', [UserController::class, 'register']);
 
 Route::post('/home/login', [UserController::class, 'login']);
-
 
 Route::get('/workspace', [TaskController::class, 'index']);
 
